@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button = ({text, onClick, disabled}: ButtonProps) => {
     return (
-        <Wrapper>
+        <Wrapper onClick={onClick}>
             <Container>
                 {text}
             </Container>
@@ -18,7 +18,8 @@ const Button = ({text, onClick, disabled}: ButtonProps) => {
 };
 
 const Wrapper = styled.div`
-  padding  : 0 24px;
+  padding: 0 24px;
+  margin: 8px 0;
 `;
 
 const Container = styled.button`
@@ -38,8 +39,4 @@ const Container = styled.button`
         background-color: #1c1c1c;
     }
 `
-
-
-
-
 export default Button;
