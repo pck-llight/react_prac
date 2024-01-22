@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const Result = () => {
     const location = useLocation()
-    // const score: number = 50;
     let score_check;
     const score = location.state.score;
     const rst_img_list = [
@@ -22,9 +21,9 @@ const Result = () => {
         "평범한씹덕.", //20점 이상
         "음 애니에 관심이 없군요", //10점 이상
         "당신은 인싸입니까?" //10점 미만
-    ]
+    ];
 
-    if(score == 50) score_check = 0;
+    if(score === 50) score_check = 0;
     else if (score >= 40) score_check = 1;
     else if (score >= 30) score_check = 2;
     else if (score >= 20) score_check = 3;

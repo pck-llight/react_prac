@@ -33,12 +33,12 @@ const Test = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (step == 10) {
+        if (step === 10) {
             navigate("/result", {
                 state: {score: score,}
             });
         }
-    },[step])
+    },[step,navigate])
 
 
     return (
