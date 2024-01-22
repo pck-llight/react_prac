@@ -38,7 +38,7 @@ const Test = () => {
                 state: {score: score,}
             });
         }
-    },[step,navigate])
+    },[step,navigate,score])
 
 
     return (
