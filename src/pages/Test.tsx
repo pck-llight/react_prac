@@ -31,10 +31,15 @@ const Test = () => {
         "일본어를 읽을 순 없지만 알아 듣는 말이 많다."
     ];
     const navigate = useNavigate()
+
     useEffect(() => {
-        // setScore(0);
-        return ()=>console.log(score);
-    }, [score]);
+        if (step == 10) {
+            navigate("/result", {
+                state: {score: score,}
+            });
+        }
+    },[step])
+
 
     return (
         <Screen>
@@ -45,28 +50,24 @@ const Test = () => {
                 <Spacer $flex={1}/>
             </Column>
             <Button text={"매우 그렇다"} onClick={() => {
-                console.log('fuck');
-                setScore(100);
-                console.log('score: ', score)
-                // setScore(score + 5);
-                if (step == 9) {
-                    navigate("/result", {
-                        state: {score: score,}
-                    });
-                }
-                setStep(step + 1);
+               setScore(score + 5);
+               setStep(step + 1);
             }}/>
             <Button text={"그렇다"} onClick={() => {
-                setStep(step + 1);
                 setScore(score + 4);
+                setStep(step + 1);
             }}/>
             <Button text={"조금그렇다"} onClick={() => {
-                setStep(step + 1);
                 setScore(score + 3);
+                setStep(step + 1);
             }}/>
             <Button text={"그렇지 않다"} onClick={() => {
-                setStep(step + 1);
                 setScore(score + 2);
+                setStep(step + 1);
+            }}/>
+            <Button text={"조금그렇다"} onClick={() => {
+                setScore(score + 1);
+                setStep(step + 1);
             }}/>
         </Screen>
     );
@@ -83,7 +84,7 @@ const Column = styled.div`
 const ImageContainer = styled.img`
   display: flex;
   width: 70dvw;
-  //height: 40dvh;
+  height: auto;
   background-position: center;
   background-size: cover;
   object-fit: cover;
@@ -94,7 +95,7 @@ const Quiz = styled.p`
   justify-content: center;
   text-align: center;
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: #000;
 `;
