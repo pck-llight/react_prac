@@ -5,7 +5,8 @@ import styled from "styled-components";
 const Result = () => {
     const location = useLocation()
     let score_check;
-    const score = location.state.score;
+    // const score = location.state.score;
+    const score: number = 0;
     const rst_img_list = [
         "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/412056711_1123076915395215_5600843426910152731_n.jpg?stp=dst-jpg_s120x120&_nc_cat=105&ccb=1-7&_nc_sid=294b3b&_nc_ohc=r5X5UiUS6ioAX9_FDdW&_nc_ht=scontent-lax3-1.cdninstagram.com&oh=00_AfBhXaXUNxv1MUF-hH9h-hJx9660r-Q_BmjOor-Zyo14LQ&oe=65B2F5E6", // 50점 => 채호짱
         "https://img.onnada.com/2022/1218/662034559_14ec8950_911181.gif", //40점 이상
@@ -40,6 +41,7 @@ const Result = () => {
             <Text>{rst_text_list[score_check]}</Text>
             <Spacer $flex={1}/>
         </Screen>
+
     );
 };
 const Screen = styled.div`
