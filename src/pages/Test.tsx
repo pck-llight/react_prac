@@ -31,6 +31,7 @@ const Test = () => {
         "일본어를 읽을 순 없지만 알아 듣는 말이 많다."
     ];
     const navigate = useNavigate()
+    const [isImgLoaded, setIsImgLoaded] = useState<boolean>(false);
 
     useEffect(() => {
         if (step === 10) {
@@ -38,40 +39,60 @@ const Test = () => {
                 state: {score: score,}
             });
         }
-    },[step,navigate,score])
+    }, [step, navigate, score])
 
 
     return (
         <Screen>
             <Spacer $height={20}/>
             <Column>
-                <ImageContainer src={imgUrl[step]}/>
-                <Quiz>{qes[step]}</Quiz>
-                <Spacer $flex={1}/>
+                <ImageContainer src={imgUrl[step]} onLoad={() => setIsImgLoaded(true)}/>
             </Column>
-            <Button text={"매우 그렇다"} onClick={() => {
-               setScore(score + 5);
-               setStep(step + 1);
-            }}/>
-            <Button text={"그렇다"} onClick={() => {
-                setScore(score + 4);
-                setStep(step + 1);
-            }}/>
-            <Button text={"조금그렇다"} onClick={() => {
-                setScore(score + 3);
-                setStep(step + 1);
-            }}/>
-            <Button text={"그렇지 않다"} onClick={() => {
-                setScore(score + 2);
-                setStep(step + 1);
-            }}/>
-            <Button text={"매우 그렇지 않다"} onClick={() => {
-                setScore(score + 1);
-                setStep(step + 1);
-            }}/>
+            {isImgLoaded && <>
+              <Spacer $height={20}/>
+              <Quiz>{qes[step]}</Quiz>
+              <Spacer $height={20}/>
+              <Button text={"매우 그렇다"} onClick={() => {
+                  setScore(score + 5);
+                  setStep(step + 1);
+                  setIsImgLoaded(false);
+              }}/>
+              <Button text={"그렇다"} onClick={() => {
+                  setScore(score + 4);
+                  setStep(step + 1);
+                  setIsImgLoaded(false);
+
+              }}/>
+              <Button text={"조금그렇다"} onClick={() => {
+                  setScore(score + 3);
+                  setStep(step + 1);
+                  setIsImgLoaded(false);
+
+              }}/>
+              <Button text={"그렇지 않다"} onClick={() => {
+                  setScore(score + 2);
+                  setStep(step + 1);
+                  setIsImgLoaded(false);
+
+              }}/>
+              <Button text={"매우 그렇지 않다"} onClick={() => {
+                  setScore(score + 1);
+                  setStep(step + 1);
+                  setIsImgLoaded(false);
+
+              }}/>
+            </>}
         </Screen>
     );
 };
+const Screen = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  //background-color: #fff;
+`;
+
 
 const Column = styled.div`
   width: 100%;
@@ -97,14 +118,6 @@ const Quiz = styled.p`
   width: 100%;
   font-size: 20px;
   font-weight: 500;
-  color: #000;
-`;
-
-const Screen = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100dvh;
   //background-color: #fff;
 `;
 
