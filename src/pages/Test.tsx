@@ -12,10 +12,10 @@ const Test = () => {
         "https://i.namu.wiki/i/_zRpJit2Z5RzMDonmLavxyH_E3QIEPDks48joI_g2iaQ3iAmKhpnWj2N0mHkNeBU_2AouOiiFxZRM4-Pig10vw.webp",
         "https://i.ytimg.com/vi/jD3cixcHCZs/maxresdefault.jpg",
         "https://m.comics-art.co.kr/web/product/big/202207/7abc1b159d66806e6274cd7e453031b3.jpg",
-        "https://cdn.manzlab.com/news/photo/202312/30415_71141_3537.jpg",
+        "https://cdn.imweb.me/upload/S2023021593b269b4a4add/e0ed1a2d0b3e7.jpg",
         "https://dszw1qtcnsa5e.cloudfront.net/community/20231110/49fc06cf-fd5d-4b8c-9318-420d0fbdf121/image105.png",
         "https://opgg-com-image.akamaized.net/attach/images/20200807071814.1345471.jpg",
-        "https://cdn.discordapp.com/attachments/1082175400626630697/1196465424569749544/20190512030351.png?ex=65b7ba42&is=65a54542&hm=560a25f249646f3492f58e8e48675705e352abf1bcafd7588e897a2f05e00b49&",
+        "https://img2.sbs.co.kr/img/sbs_cms/WE/2018/03/19/WE58016857_ori.jpg",
         "https://pbs.twimg.com/media/FSiy-29aAAAzW6g.jpg"
     ];
     const qes = [
