@@ -9,7 +9,7 @@ const Test = () => {
     const imgUrl = [
         "https://image.fmkorea.com/files/attach/new/20200725/486616/239936424/3004712650/b4ffc5a1148b00d9cd00e79a05635748.jpg",
         "https://www.public25.com/news/photo/201907/144_151_2026.jpg",
-        "https://cdn.discordapp.com/attachments/1092812264484122656/1196480856395632740/image.png?ex=65b7c8a1&is=65a553a1&hm=b836259db092eed24571feb936e1da6fe85bcf6b79028700a87c0ba31ce57b16&",
+        "https://i.namu.wiki/i/_zRpJit2Z5RzMDonmLavxyH_E3QIEPDks48joI_g2iaQ3iAmKhpnWj2N0mHkNeBU_2AouOiiFxZRM4-Pig10vw.webp",
         "https://i.ytimg.com/vi/jD3cixcHCZs/maxresdefault.jpg",
         "https://m.comics-art.co.kr/web/product/big/202207/7abc1b159d66806e6274cd7e453031b3.jpg",
         "https://cdn.manzlab.com/news/photo/202312/30415_71141_3537.jpg",
