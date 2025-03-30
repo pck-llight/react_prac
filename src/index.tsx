@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Test from "./pages/Test";
 import Result from "./pages/Result";
-import Ranking from "./pages/Ranking";
+// import Ranking from "./pages/Ranking";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,7 +18,7 @@ root.render(
               <Route path={"/"} element={<Home/>}/>
               <Route path={"/test"} element={<Test/>}/>
               <Route path={"/result"} element={<Result/>}/>
-              <Route path={"/rank"} element={<Ranking/>}/>
+              {/* <Route path={"/rank"} element={<Ranking/>}/> */}
           </Routes>
       </BrowserRouter>
   </React.StrictMode>
