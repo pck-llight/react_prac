@@ -104,11 +104,15 @@ const Column = styled.div`
 
 const ImageContainer = styled.img`
   display: flex;
-  width: 70dvw;
-  height: auto;
+  width: 30dvw;
+//   height: auto;
+  aspect-ratio: 3/2;
   background-position: center;
   background-size: cover;
   object-fit: cover;
+  @media (max-width: 768px) {
+    width: 90dvw;
+  }
 `;
 
 const Quiz = styled.p`
