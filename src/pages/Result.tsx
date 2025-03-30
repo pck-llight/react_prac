@@ -1,6 +1,7 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
 import styled from "styled-components";
+import {ImageContainer} from "./Test";
 
 const Result = () => {
     const location = useLocation()
@@ -45,6 +46,7 @@ const Result = () => {
     );
 };
 const Screen = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -72,15 +74,6 @@ const Text= styled.div`
   font-size: 32px;
   font-weight: 500;
   padding: 0 24px;
-`;
-const ImageContainer = styled.img`
-  width: 70dvw;
-  height: auto;
-  display: flex;
-  background-position: center;
-  background-size: cover;
-  object-fit: cover;
-  margin: 0 auto;
 `;
 
 const Spacer = styled.div<{ $height?: number; $flex?: number }>`

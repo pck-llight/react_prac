@@ -102,7 +102,7 @@ const Column = styled.div`
   align-items: center;
 `
 
-const ImageContainer = styled.img`
+export const ImageContainer = styled.img`
   display: flex;
   width: 30dvw;
 //   height: auto;
